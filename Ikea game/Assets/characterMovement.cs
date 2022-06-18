@@ -4,6 +4,7 @@ public class characterMovement : MonoBehaviour
 {
     public CharacterController controller;
 
+
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -46,22 +47,11 @@ public class characterMovement : MonoBehaviour
         {
             speed = 18f;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        else
         {
             speed = 12f;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            gameObject.GetComponent<Transform>().transform.localScale = new Vector3(1, 0.6f, 1);
-            gameObject.GetComponent<Transform>().transform.position = transform.position - new Vector3(0, 0.4f, 0);
-            speed = 6f;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            gameObject.GetComponent<Transform>().transform.localScale = new Vector3(1, 1, 1);
-            gameObject.GetComponent<Transform>().transform.position = transform.position + new Vector3(0, 0.4f, 0);
-            speed = 12f;
-        }
+
     }
 }
