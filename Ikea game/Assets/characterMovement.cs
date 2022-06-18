@@ -42,13 +42,16 @@ public class characterMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        //sprint
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed = 18f;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        else
         {
             speed = 12f;
         }
+
+
     }
 }
